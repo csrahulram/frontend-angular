@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
-import { TodoComponent } from './views/todo/todo.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: TodoComponent
+        redirectTo: 'todo',
+        pathMatch: 'full'
+    },
+    {
+        path: 'todo',
+        //loadChildren: () => import('./views/todo/todo.routes').then((r) => r.TodoRoutes)
+        loadChildren: () => import('./views/todo/todo.module').then((m) => m.TodoModule)
     }
 ];
