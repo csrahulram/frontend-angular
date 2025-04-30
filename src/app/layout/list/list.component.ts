@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ItemComponent } from '../../shared/item/item.component';
 import { SearchComponent } from '../../shared/search/search.component';
+import { ButtonComponent } from "../../shared/button/button.component";
 
 
 type Todo = {
@@ -18,7 +19,7 @@ type Todo = {
     selector: 'app-layout-list',
     templateUrl: 'list.component.html',
     styleUrl: 'list.component.scss',
-    imports: [CommonModule, SearchComponent, ItemComponent]
+    imports: [CommonModule, SearchComponent, ItemComponent, ButtonComponent]
 })
 
 
@@ -44,6 +45,10 @@ export class ListComponent implements OnInit {
                 this.data = res.todos
             }
         })
+    }
+
+    customHandler() {
+        console.log('Super')
     }
 
 

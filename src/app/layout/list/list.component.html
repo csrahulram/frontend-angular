@@ -1,2 +1,6 @@
-<app-shared-search></app-shared-search>
+<div>
+    <app-shared-search></app-shared-search>
+    <app-shared-button class="w-[40px] h-[40px]" [handler]="customHandler"></app-shared-button>
+</div>
+
 <app-shared-item *ngFor="let item of data" [data]="item"></app-shared-item>

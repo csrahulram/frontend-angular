@@ -1,5 +1,5 @@
 import { CommonModule } from "@angular/common";
-import { Component, HostBinding, Input } from "@angular/core";
+import { Component, HostListener, Input } from "@angular/core";
 
 @Component({
     selector: 'app-shared-button',
@@ -10,11 +10,12 @@ import { Component, HostBinding, Input } from "@angular/core";
 
 export class ButtonComponent {
 
-    @HostBinding('click') handler = () => {
+    @HostListener('click', ['$event'])
+    @Input() handler = () => {
         console.log('Working');
     }
 
-    icon = 'plus';
-    title = 'Create';
-    bgColor = 'grey';
+    @Input() title = '';
+    @Input() icon = '';
+
 }
