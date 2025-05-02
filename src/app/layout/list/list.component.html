@@ -1,6 +1,7 @@
-<div>
+<div class="flex place-content-between">
     <app-shared-search></app-shared-search>
-    <app-shared-button class="w-[40px] h-[40px]" [handler]="customHandler"></app-shared-button>
+    <app-shared-button class="w-[36px] h-[36px]" [handler]="customHandler" [icon]="'plus'"></app-shared-button>
 </div>
-
-<app-shared-item *ngFor="let item of data" [data]="item"></app-shared-item>
+<div class="overflow-auto h-[510px] mt-[10px]">
+    <app-shared-item *ngFor="let item of data" [data]="item"></app-shared-item>
+</div>

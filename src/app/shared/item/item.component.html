@@ -1,5 +1,14 @@
-<div class="title">{{data().title}}</div>
-<div class="desscription">{{data().description}}</div>
-<div class="created-date">{{data().createdDate}}</div>
-<div class="due-date">{{data().dueDate}}</div>
+<div class="flex items-center place-content-between">
+    <div class="flex gap-[10px]">
+        <input class="select" type="checkbox">
+        <div class="title">{{data().title}}</div>
+    </div>
+    <app-shared-progress class="w-[100px]"></app-shared-progress>
+</div>
+<!-- <div class="animate-spin w-6 h-6 border-4 border-blue-500 border-t-transparent rounded-full"></div> -->
+<div class="flex items-end place-content-between">
+    <div class="desscription">{{data().description}}</div>
+    <app-shared-button class="w-[24px] h-[24px]" [icon]="'edit'"></app-shared-button>
+</div>
+
 <div class="status">{{data().status}}</div>

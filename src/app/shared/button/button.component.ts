@@ -1,5 +1,5 @@
 import { CommonModule } from "@angular/common";
-import { Component, HostListener, Input } from "@angular/core";
+import { Component, HostBinding, HostListener, Input } from "@angular/core";
 
 @Component({
     selector: 'app-shared-button',
@@ -9,6 +9,9 @@ import { Component, HostListener, Input } from "@angular/core";
 })
 
 export class ButtonComponent {
+
+    @HostBinding('class') host = 'flex cursor-pointer items-center justify-center rounded-[5px] transition duration-300 hover:bg-[#0000002c] transition ';
+
 
     @HostListener('click', ['$event'])
     @Input() handler = () => {

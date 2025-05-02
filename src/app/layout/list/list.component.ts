@@ -1,6 +1,6 @@
 import { map, Observable } from 'rxjs';
 import { Apollo, gql } from 'apollo-angular';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ItemComponent } from '../../shared/item/item.component';
 import { SearchComponent } from '../../shared/search/search.component';
@@ -21,10 +21,9 @@ type Todo = {
     styleUrl: 'list.component.scss',
     imports: [CommonModule, SearchComponent, ItemComponent, ButtonComponent]
 })
-
-
-
 export class ListComponent implements OnInit {
+
+    @HostBinding('class') host = 'block p-2 box-border';
 
     data: Todo[] = [];
 

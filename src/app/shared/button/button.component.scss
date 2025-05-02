@@ -1,6 +1,6 @@
-:host {
-    display: block;
-    cursor: pointer;
+:host:hover {
+    background-color: #0000002c;
+    transition: 0.3s;
 }
 
 .icon {
